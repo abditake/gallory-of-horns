@@ -5,9 +5,9 @@ import React from "react";
 class Footer extends React.Component{
   render(){
     return(
-      <Footer> 
-          &copy:Abdinasir Yussuf, 2022;
-      </Footer>
+      <footer> 
+         &copy; Abdinasir Yussuf 
+      </footer>
       )
   }
 }
