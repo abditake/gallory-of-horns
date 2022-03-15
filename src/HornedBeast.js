@@ -1,8 +1,5 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './HornedBeast.css'
-import {Button, Card} from 'react-bootstrap';
-
 
 class Header extends React.Component{
   constructor(props){
