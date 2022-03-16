@@ -39,32 +39,48 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Journal section
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+Number and name of feature: Display images
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Estimate of time needed to complete: 4 hours
 
-### Code Splitting
+Start time: 1:00pm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Finish time: 4:40pm
 
-### Analyzing the Bundle Size
+Actual time needed to complete: 3hrs and 40 mins
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+Number and name of feature: Allow users to vote for their favorite beast
 
-### Advanced Configuration
+Estimate of time needed to complete:30 mins
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start time: 3:00pm
 
-### Deployment
+Finish time: 3:10pm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Actual time needed to complete: 10 mins
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+
+
+```
+Number and name of feature: Bootstrap
+
+Estimate of time needed to complete:2 hours
+
+Start time: 4:40pm
+
+Finish time: 5:50pm
+
+Actual time needed to complete: 1hr and 10 mins
+
+```
+
+
