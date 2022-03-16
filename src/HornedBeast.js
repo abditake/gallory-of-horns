@@ -1,5 +1,9 @@
+
 import React from "react";
+import {Button,Card} from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './HornedBeast.css'
+
 
 class Header extends React.Component{
   constructor(props){
@@ -20,18 +24,25 @@ class Header extends React.Component{
   
   render(){
     return(
+      <Card className="strawberry">
+        <Card.Text>
+        🤎{this.state.favorites}🤎 
+          </Card.Text>
+        <Card.Img variant="top" src={this.props.imgUrl} />
+        <Card.Body>
+          <Card.Title>{this.props.keyword}</Card.Title>
+          
+          <Card.Text>
+            {this.props.description}
+          </Card.Text>
+          
+        </Card.Body>
+        <Card.Text className="text">
+           Number of horns: {this.props.horns}
+          </Card.Text>
+        <Button onClick={this.handlefavorite}>Likes</Button>
+      </Card>
       
-
-      
-      <div className="strawberry">
-        <h3> {this.props.title} </h3>
-        <img src={this.props.imgUrl} alt="horned beast images" ></img>
-        <p>{this.state.favorites}</p>
-        <p onClick={this.handlefavorite}> favorite emoji </p>
-        <p>{this.props.description}</p>
-        <p>{this.props.keyword}</p>
-        <p>{this.props.horns}</p>
-      </div>
     
       )
   }
