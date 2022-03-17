@@ -2,37 +2,36 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js'
 import Footer from './Footer.js'
-import { Modal, Button } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
+import SelectedBeast from './SelectedBeast';
 import Main from './Main.js'
 import data from './data.json'
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showModal: false,
-      imgUrl: {},
+      imgUrl: '',
       title: '',
       description: ''
     }
   }
+  openModal = (description,image,title) => {
+    this.setState({
+      showModal: true,
+      description: description,
+      imgUrl: image,
+      title: title
+    });
+  };
 
+  
   hideModal = () => {
     this.setState({
       showModal: false
     })
   };
 
-  openModal = (description, imgUrl, title) => {
-    this.setState({
-      showModal: true,
-      imgUrl: imgUrl,
-      title: title,
-      description: description
-    });
-  };
 
   render() {
     return (
@@ -40,10 +39,18 @@ class App extends React.Component {
         <Header />
         <Main
           data={data}
-          openModal={this.openModal} />
+          openModal={this.openModal}
+        />
 
         <Footer />
-        <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
+        <SelectedBeast
+        title={this.state.title}
+        imgUrl={this.state.imgUrl}
+        description={this.state.description}
+        hideModal={this.hideModal}
+        showModal={this.state.showModal}
+        />
+        {/* <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
           <Modal.Header closeButton>
             <Modal.Title>{this.state.title}</Modal.Title>
           </Modal.Header>
@@ -54,7 +61,7 @@ class App extends React.Component {
               Close
             </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal> */}
       </>
     );
   }
