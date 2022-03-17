@@ -11,19 +11,22 @@ export default class SelectedBeast extends Component {
       showModal: true
     }
   }
-
-
+  hideModal = () => {
+    this.setState({
+      showModal: false
+    })
+  };
 
   render() {
     return (
-      <Modal>
-        <Modal.Header>
-          <ModalTitle></ModalTitle>
+      <Modal show={this.state.showModal} onHide={this.hideModal}>
+        <Modal.Header closeButton>
+          <ModalTitle>{this.props.title}</ModalTitle>
         </Modal.Header>
-        <Image></Image>
-        <Modal.Body></Modal.Body>
+        <Image src={this.props.imgUrl}></Image>
+        <Modal.Body>{this.props.description}</Modal.Body>
         <Modal.Footer>
-          <Button></Button>
+          <Button onClick={this.hideModal}>Close</Button>
         </Modal.Footer>
       </Modal>
     )

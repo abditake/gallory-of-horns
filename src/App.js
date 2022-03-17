@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js'
 import Footer from './Footer.js'
-import { Modal, Button } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
+import SelectedBeast from './SelectedBeast';
 import Main from './Main.js'
 import data from './data.json'
+
 
 
 class App extends React.Component {
@@ -25,12 +25,9 @@ class App extends React.Component {
     })
   };
 
-  openModal = (description, imgUrl, title) => {
+  openModal = () => {
     this.setState({
       showModal: true,
-      imgUrl: imgUrl,
-      title: title,
-      description: description
     });
   };
 
@@ -43,6 +40,11 @@ class App extends React.Component {
           openModal={this.openModal} />
 
         <Footer />
+        <SelectedBeast
+        title={this.state.title}
+        imgUrl={this.state.imgUrl}
+        description={this.state.description}
+        />
         {/* <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
           <Modal.Header closeButton>
             <Modal.Title>{this.state.title}</Modal.Title>
