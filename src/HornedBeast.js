@@ -21,13 +21,13 @@ class Header extends React.Component{
     })
 
   }
-
+  
   render(){
     return(
       <Card className="strawberry">
-        <Card.Title>
+        <Card.Text>
         {this.state.favorites? `🤎${this.state.favorites}`: ''} 
-          </Card.Title>
+          </Card.Text>
         <Card.Img variant="top" src={this.props.imgUrl} />
         <Card.Body>
           <Card.Title>{this.props.keyword}</Card.Title>
