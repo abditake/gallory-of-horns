@@ -43,7 +43,7 @@ class App extends React.Component {
           openModal={this.openModal} />
 
         <Footer />
-        <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
+        {/* <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
           <Modal.Header closeButton>
             <Modal.Title>{this.state.title}</Modal.Title>
           </Modal.Header>
@@ -54,7 +54,7 @@ class App extends React.Component {
               Close
             </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal> */}
       </>
     );
   }
