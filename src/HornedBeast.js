@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './HornedBeast.css'
 
 
-class Header extends React.Component{
+class HornedBeast extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -14,23 +14,36 @@ class Header extends React.Component{
 
     
   }
-  
-  handlefavorite = () => {
+
+  handleFavorite = () => {
     this.setState({
       favorites: this.state.favorites + 1
     })
 
   }
   
+  
+  
+  handleClickEvents = () => {
+    this.handleFavorite();
+    this.handleOpenModal();
+    
+  }
+  
+  handleOpenModal = () =>{
+    this.props.openModal(this.props.description,this.props.imgUrl,this.props.title)
+  }
+  
+  
   render(){
     return(
       <Card className="strawberry">
         <Card.Text>
-        🤎{this.state.favorites}🤎 
+        {this.state.favorites? `🤎${this.state.favorites}`:''}
           </Card.Text>
-        <Card.Img variant="top" src={this.props.imgUrl} />
+        <Card.Img variant="top" style={{cursor:'pointer'}} src={this.props.imgUrl} onClick={this.handleOpenModal}/>
         <Card.Body>
-          <Card.Title>{this.props.keyword}</Card.Title>
+          <Card.Title>{this.props.title}</Card.Title>
           
           <Card.Text>
             {this.props.description}
@@ -40,7 +53,7 @@ class Header extends React.Component{
         <Card.Text className="text">
            Number of horns: {this.props.horns}
           </Card.Text>
-        <Button onClick={this.handlefavorite}>Likes</Button>
+        <Button onClick={this.handleFavorite}>Likes</Button>
       </Card>
       
     
@@ -50,4 +63,4 @@ class Header extends React.Component{
 
 
 
-export default Header;
+export default HornedBeast;
