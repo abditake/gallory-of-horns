@@ -55,18 +55,6 @@ class App extends React.Component {
           showModal={this.state.showModal}
         />
         <Footer />
-        {/* <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>{this.state.title}</Modal.Title>
-          </Modal.Header>
-          <Image className='modalImg' src={this.state.imgUrl}></Image>
-          <Modal.Body>{this.state.description}</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.hideModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal> */}
       </>
     );
   }
