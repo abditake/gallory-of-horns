@@ -1,11 +1,10 @@
+import React from 'react'
 import { Modal, ModalTitle, Image, Button } from 'react-bootstrap'
-import React, { Component } from 'react'
 
 
 
 
-export default class SelectedBeast extends Component {
-  
+ class SelectedBeast extends React.Component {
   
   render() {
     return (
@@ -22,3 +21,6 @@ export default class SelectedBeast extends Component {
     )
   }
 }
+
+
+export default SelectedBeast;
