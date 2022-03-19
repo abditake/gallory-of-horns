@@ -1,15 +1,27 @@
 import React from "react";
 import HornedBeast from './HornedBeast.js';
 import './Main.css'
+import Forms from "./Forms.js";
+
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
 
+    this.state = {
 
-
-
+    }
+  }
 
   render() {
-    let beast = this.props.data.map((hornedBeast, index) =>
+
+    let allBeast = this.props.data;
+    if (this.props.horns != null) {
+      allBeast = this.props.data.filter(filter => filter.horns === parseInt(this.props.horns));
+      console.log(allBeast);
+    };
+    // console.log(allBeast);
+    let beast = allBeast.map((hornedBeast, index) =>
       <HornedBeast
         imgUrl={hornedBeast.imgUrl}
         title={hornedBeast.title}
@@ -22,6 +34,14 @@ class Main extends React.Component {
     )
     return (
       <main>
+        <SelectedBeast
+          title={this.props.title}
+          imgUrl={this.props.imgUrl}
+          description={this.props.description}
+          hideModal={this.props.hideModal}
+          showModal={this.props.showModal}
+        />
+        <Forms handleFormInput={this.props.handleFormInput} />
         {beast}
       </main >
     )

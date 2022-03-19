@@ -24,11 +24,11 @@ class HornedBeast extends React.Component{
   
   
   
-  handleClickEvents = () => {
-    this.handleFavorite();
-    this.handleOpenModal();
+  // handleClickEvents = () => {
+  //   this.handleFavorite();
+  //   this.handleOpenModal();
     
-  }
+  // }
   
   handleOpenModal = () =>{
     this.props.openModal(this.props.description,this.props.imgUrl,this.props.title)
