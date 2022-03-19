@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js'
 import Footer from './Footer.js'
-import SelectedBeast from './SelectedBeast';
 import Main from './Main.js'
 import data from './data.json'
 
@@ -13,7 +12,8 @@ class App extends React.Component {
       showModal: false,
       imgUrl: '',
       title: '',
-      description: ''
+      description: '',
+      horns: null
     }
   }
   openModal = (description,image,title) => {
@@ -32,6 +32,12 @@ class App extends React.Component {
     })
   };
 
+  handleFormInput = (numHorns) => {
+    this.setState({
+      horns: numHorns
+      
+    })
+  }
 
   render() {
     return (
@@ -40,16 +46,15 @@ class App extends React.Component {
         <Main
           data={data}
           openModal={this.openModal}
+          horns = {this.state.horns}
+          handleFormInput = {this.handleFormInput}
+          title={this.state.title}
+          imgUrl={this.state.imgUrl}
+          description={this.state.description}
+          hideModal={this.hideModal}
+          showModal={this.state.showModal}
         />
-
         <Footer />
-        <SelectedBeast
-        title={this.state.title}
-        imgUrl={this.state.imgUrl}
-        description={this.state.description}
-        hideModal={this.hideModal}
-        showModal={this.state.showModal}
-        />
         {/* <Modal className='modalWindow' show={this.state.showModal} onHide={this.hideModal} animation={false}>
           <Modal.Header closeButton>
             <Modal.Title>{this.state.title}</Modal.Title>
