@@ -2,7 +2,7 @@ import React from "react";
 import HornedBeast from './HornedBeast.js';
 import SelectedBeast from "./SelectedBeast.js";
 import './Main.css'
-import Forms from "./Forms.js";
+
 
 
 class Main extends React.Component {
