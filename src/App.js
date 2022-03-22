@@ -4,7 +4,7 @@ import Header from './Header.js'
 import Footer from './Footer.js'
 import Main from './Main.js'
 import data from './data.json'
-
+import Forms from './Forms';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -43,6 +43,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <Forms handleFormInput={this.handleFormInput} />
         <Main
           data={data}
           openModal={this.openModal}
