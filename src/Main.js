@@ -1,5 +1,8 @@
 import React from "react";
 import HornedBeast from './HornedBeast.js';
+
+import SelectedBeast from "./SelectedBeast.js"
+
 import './Main.css'
 
 
