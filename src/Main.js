@@ -32,6 +32,7 @@ class Main extends React.Component {
         key={index}
         openModal={this.props.openModal}
       />
+      
     )
     return (
       <main>
@@ -41,10 +42,12 @@ class Main extends React.Component {
           description={this.props.description}
           hideModal={this.props.hideModal}
           showModal={this.props.showModal}
-        />
-        <Forms handleFormInput={this.props.handleFormInput} />
-        {beast}
+          />
+         
+          {beast}
+      
       </main >
+      
     )
   }
 }
